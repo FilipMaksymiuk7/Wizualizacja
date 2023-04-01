@@ -95,6 +95,16 @@ class ciagi:
         for x in range(self.n):
             print(pomocnicza)
             pomocnicza += self.r
+
+    # def wyswietl_elementy(self):
+    #     duzo = 0
+    #     a = self.ile
+    #     while (a > 0):
+    #         print(self.a)
+    #         self.a += self.r
+    #         a -= 1
+
+
     def policz_sume(self):
         pomocnicza = self.a
         suma2 = 0
@@ -111,7 +121,13 @@ class ciagi:
             self.a += self.r
         print("Liczba elementów: ", ile)
 
-
+ # def policz_elementy(self):
+ #        duzo = 0
+ #        a= self.ile
+ #        while(a>0):
+ #            duzo += 1
+ #            a-=1
+ #        print(duzo)
 #wyswietla,parametry,suma
 klasa2 = ciagi(0,0,0)
 klasa2.wyswietl_dane()

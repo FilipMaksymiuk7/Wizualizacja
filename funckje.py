@@ -13,11 +13,26 @@ lista1 =[random.randint(1,100) for x in range(10)]
 nowa = [x for x in lista1 if x%2==0]
 print(lista1)
 print(nowa)
+#
+# lista12 =[]
+# for x in range(10):
+#     lista12.append(random.randint(0, 100))
+# print(lista12)
+#
+# nowalista = [x for x in lista12 if x%2==0]
+# print(nowalista)
+
+
 #zad3
 
 produkty = {'jajka':'sztuki','marchew':'sztuki','ziemniaki':'kg'}
 nowa2 = [x for x in produkty.keys() if produkty[x]=='sztuki']
 print(nowa2)
+
+# diary = {'ziemniaki':'kg', 'jajka':'szt', 'banany':'kg'}
+# nowalista3 = [j for j,i in diary.items() if i == 'szt']
+# print(nowalista3)
+
 
 #zad4
 def trojkat(x,y,z):
@@ -54,23 +69,23 @@ def ciag(a=1,b=4,ile=10):
 
 
 
-ciag()
-
 
 #zad7
-def ciag2(*liczby):
-    if len(liczby)==0:
-        return print('blad')
-    a = liczby[0]
-    b = liczby[1]
-    ile = liczby[2]
-    iloczyn = a
-    for x in range(ile - 1):
-        a *= b
-        iloczyn *= a
-    print(iloczyn)
+def ciag2(*tak):
 
-ciag2()
+    if tak==0 or tak ==1 or tak==2 or len(tak)>3:
+        return 0
+    else:
+        a = tak[0]
+        b = tak[1]
+        c = tak[2]
+        for x in range(c-1):
+            a *= b
+
+        return print(a)
+
+
+ciag2(1,4,10)
 
 #zad8
 # def hard(**rzeczy):
@@ -84,15 +99,42 @@ ciag2()
 # hard(slodycze='czekolada',rozrywka=['gry','filmy'])
 
 
+# def zakupy(**rzeczy):
+#     suma: float =0
+#     produkty = []
+#     for i in rzeczy:
+#         suma +=rzeczy[i]
+#         produkty.append(i)
+#     return suma,len(produkty)
+#
+# print(zakupy(mleko=5,kasz=2,maslo=8))
+
+
+# def oblicz_koszt(*zakupy):
+#     ilosc = 0
+#     suma = 0
+#     for produkt in zakupy:
+#         ilosc += produkt[1]
+#         suma += produkt[1] * produkt[2]
+#     return ilosc, suma
+
+
+# zakupy = [
+#     ['mleko', 2, 2.5],
+#     ['chleb', 1, 3.0],
+#     ['masło', 1, 5.0],
+#     ['jajka', 12, 0.5]
+# ]
+#
+# ilosc, suma = oblicz_koszt(*zakupy)
+# print(f'Ilość produktów: {ilosc}, całkowity koszt: {suma} zł')
+#
 
 
 def zakupy(**rzeczy):
     a=len(rzeczy)
     b = sum(rzeczy.values())
     return a,b
-
-
-
 
 rzeczy={'jajka':2.5,'maslo':3.2,'kajzerka':2}
 ilosc,koszt = zakupy(**rzeczy)
